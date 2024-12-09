@@ -8,20 +8,9 @@ services:
       - 8501:8501
 
   backend_app:
-    build: ./api
+    build: ./backend
     container_name: metiscare-backend
     hostname: backend-metiscare
-    volumes: ['./backend:/apicode']
+    volumes: ['./backend:/backend-code']
     ports:
       - 4000:4000
-
-  database:
-    env_file:
-      - ./api/.env
-    image: mysql:8
-    container_name: metiscare-db
-    hostname: db
-    volumes:
-      - ./database-files:/docker-entrypoint-initdb.d/:ro
-    ports:
-      - 3200:3306
