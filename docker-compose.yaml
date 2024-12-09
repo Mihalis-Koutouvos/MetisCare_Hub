@@ -3,7 +3,7 @@ services:
     build: ./frontend_app
     container_name: metiscare-frontend
     hostname: frontend-app-metiscare
-    volumes: ['./app/src:/appcode']
+    volumes: ['./frontend_app/src:/appcode']
     ports:
       - 8501:8501
 
@@ -11,14 +11,14 @@ services:
     build: ./api
     container_name: metiscare-backend
     hostname: backend-metiscare
-    volumes: ['./api:/apicode']
+    volumes: ['./backend:/apicode']
     ports:
       - 4000:4000
 
   database:
     env_file:
       - ./api/.env
-    image: mysql:9
+    image: mysql:8
     container_name: metiscare-db
     hostname: db
     volumes:
