@@ -1,1 +1,31 @@
+#Extra, hidden files:
+.DS_Store
+
+#Safety Measures:
 .env
+.env.local
+env/
+
+#Node.js Modules:
+node_modules/
+
+#Python:
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pydist
+*.egg
+*.egg-info
+dist/
+build/
+env/
+venv/
+
+#Cross-Platform:
+.idea/
+.vscode/
+Thumbs.db
+
+#Others:
+*.log
