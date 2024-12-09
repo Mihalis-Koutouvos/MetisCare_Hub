@@ -1,0 +1,27 @@
+services:
+  frontend_app:
+    build: ./frontend_app
+    container_name: metiscare-frontend
+    hostname: frontend-web-app
+    volumes: ['./app/src:/appcode']
+    ports:
+      - 8501:8501
+
+  backend_app:
+    build: ./api
+    container_name: metiscare-backend
+    hostname: web-api
+    volumes: ['./api:/apicode']
+    ports:
+      - 4000:4000
+
+  database:
+    env_file:
+      - ./api/.env
+    image: mysql:9
+    container_name: metiscare-db
+    hostname: db
+    volumes:
+      - ./database-files:/docker-entrypoint-initdb.d/:ro
+    ports:
+      - 3200:3306
