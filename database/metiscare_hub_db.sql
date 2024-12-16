@@ -114,9 +114,11 @@ CREATE TABLE admins (
 -- Create hospital_departments table --
 CREATE TABLE hospital_departments (
     hospitalDepartment_id INT AUTO_INCREMENT PRIMARY KEY,
+    departmentHead_id INT, 
     name VARCHAR(100) NOT NULL,
-
-
+    description TEXT,
+    location VARCHAR(100),
+    FOREIGN KEY (departmentHead_id) REFERENCES users (id)
 );
 
 
