@@ -161,6 +161,8 @@ CREATE TABLE billings (
 
 -- Create a schedules table --
 CREATE TABLE schedules (
+    schedule_id INT AUTO_INCREMENT PRIMARY KEY,
+    
 
 
 );
