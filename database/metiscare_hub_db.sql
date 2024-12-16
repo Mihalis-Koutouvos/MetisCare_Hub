@@ -126,9 +126,13 @@ CREATE TABLE rooms (
 );
 
 
--- Create a payments table --
-CREATE TABLE payments (
+-- Create a billings table --
+CREATE TABLE billings (
+    billing_id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT,
 
+
+    FOREIGN KEY (patient_id) REFERENCES patients (patient_id)
 );
 
 
