@@ -111,6 +111,13 @@ CREATE TABLE admins (
 );
 
 
+-- Create departments table --
+CREATE TABLE departments (
+
+);
+
+
+
 
 -- Create rooms table --
 CREATE TABLE rooms (
@@ -130,6 +137,8 @@ CREATE TABLE rooms (
 CREATE TABLE billings (
     billing_id INT AUTO_INCREMENT PRIMARY KEY,
     patient_id INT,
+    credit_card,
+
 
 
     FOREIGN KEY (patient_id) REFERENCES patients (patient_id)
