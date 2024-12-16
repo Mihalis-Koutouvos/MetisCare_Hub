@@ -51,3 +51,17 @@ CREATE TABLE physicians (
     INDEX idx_licenseNumber (licenseNumber),
     INDEX idx_workType (workType)
 );
+
+
+-- Create patients table --
+-- Possibly may need to change this to a non-user entity
+CREATE TABLE patients (
+    patient_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    primaryPhysician_id INT,
+    DOB DATE,
+    medicalHistory TEXT,
+    bloodType ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'),
+    currentMedications TEXT,
+    FOREIGN KEY (user_id) REFERENCES users (id)
+);
