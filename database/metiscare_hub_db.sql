@@ -118,6 +118,8 @@ CREATE TABLE hospital_departments (
     name VARCHAR(100) NOT NULL,
     description TEXT,
     location VARCHAR(100),
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (departmentHead_id) REFERENCES users (id)
 );
 
@@ -146,12 +148,14 @@ CREATE TABLE billings (
 
 
 
+
     FOREIGN KEY (patient_id) REFERENCES patients (patient_id)
 );
 
 
 -- Create a schedules table --
 CREATE TABLE schedules (
+
 
 );
 
