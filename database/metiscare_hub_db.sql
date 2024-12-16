@@ -132,6 +132,12 @@ CREATE TABLE payments (
 );
 
 
+-- Create a schedules table --
+CREATE TABLE schedules (
+
+);
+
+
 
 -- Create private_room table --
 CREATE TABLE private_rooms (
