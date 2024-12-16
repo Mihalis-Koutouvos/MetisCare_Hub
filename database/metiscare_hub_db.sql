@@ -124,3 +124,77 @@ CREATE TABLE rooms (
     roomCapacity INT DEFAULT 0,
     availability ENUM('Open', 'Almost-Full', 'Full', 'Under Repair') DEFAULT 'Open'
 );
+
+
+
+-- Create private_room table --
+CREATE TABLE private_rooms (
+
+);
+
+
+-- Create semi_private_rooms table --
+CREATE TABLE semi_private_rooms (
+
+);
+
+-- Create intensive_care_unit_rooms table  --
+CREATE TABLE intensive_care_unit_rooms (
+
+);
+
+-- Create emergency_room_rooms table __
+CREATE TABLE emergency_room_rooms (
+
+);
+
+-- Create operating_rooms table --
+CREATE TABLE operating_rooms (
+
+);
+
+-- Create maternity_rooms table --
+CREATE TABLE maternity_rooms (
+
+);
+
+-- Create recovery_rooms table --
+CREATE TABLE recovery_rooms (
+
+);
+
+-- Create isolation_rooms table --
+CREATE TABLE isolation_rooms (
+
+);
+
+-- Create pediatric_rooms table --
+CREATE TABLE pediatric_rooms (
+
+);
+
+-- Create observation_rooms table --
+CREATE TABLE observation_rooms (
+
+);
+
+-- Create step_down_unit_rooms table --
+CREATE TABLE step_down_unit_rooms (
+
+);
+
+-- Create general_ward_rooms table --
+CREATE TABLE general_ward_rooms (
+
+);
+
+-- Create psychiatric_rooms table --
+CREATE TABLE psychiatric_rooms (
+
+);
+
+-- Create rehabilitation_rooms table --
+CREATE TABLE rehabilitation_rooms (
+
+);
+
