@@ -28,3 +28,26 @@ CREATE TABLE users (
     INDEX idx_mobile (mobile),
     INDEX idx_email (email)
 );
+
+
+-- Create physicians table --
+CREATE TABLE physicians (
+    physician_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    specialization VARCHAR(200),
+    experienceInYears INT NOT NULL,
+    medicalSchool VARCHAR(200) NOT NULL,
+    licenseState VARCHAR(200) NOT NULL,
+    licenseNumber VARCHAR(100) NOT NULL UNIQUE,
+    hospitalNetwork TEXT,
+    workSchedule TEXT,
+    workType ENUM('Full-time', 'Part-time', 'Contract'),
+    onCall BOOLEAN DEFAULT FALSE,
+    startDate DATETIME NOT NULL,
+    endDate DATETIME DEFAULT NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    INDEX idx_id (physician_id),
+    INDEX idx_specialization (specialization),
+    INDEX idx_licenseNumber (licenseNumber),
+    INDEX idx_workType (workType)
+);
