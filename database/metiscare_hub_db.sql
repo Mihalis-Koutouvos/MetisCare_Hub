@@ -126,6 +126,12 @@ CREATE TABLE rooms (
 );
 
 
+-- Create a payments table --
+CREATE TABLE payments (
+
+);
+
+
 
 -- Create private_room table --
 CREATE TABLE private_rooms (
