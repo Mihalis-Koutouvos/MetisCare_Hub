@@ -111,9 +111,11 @@ CREATE TABLE admins (
 );
 
 
--- Create departments table --
-CREATE TABLE departments (
-    department_id INT AUTO_INCREMENT PRIMARY KEY,
+-- Create hospital_departments table --
+CREATE TABLE hospital_departments (
+    hospitalDepartment_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+
 
 );
 
