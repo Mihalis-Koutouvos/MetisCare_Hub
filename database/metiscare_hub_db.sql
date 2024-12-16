@@ -98,3 +98,14 @@ CREATE TABLE nurses (
     FOREIGN KEY (reportTo) REFERENCES nursing_supervisors (nursingSupervisors_id),
     INDEX idx_nursingLicense (nursingLicense)
 );
+
+-- Create admins table --
+CREATE TABLE admins (
+    patient_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    role VARCHAR(200) NOT NULL,
+    departmentBranch VARCHAR(200),
+    permissionList TEXT,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    INDEX idx_role (role)
+);
