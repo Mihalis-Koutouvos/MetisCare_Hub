@@ -113,6 +113,7 @@ CREATE TABLE admins (
 
 -- Create departments table --
 CREATE TABLE departments (
+    department_id INT AUTO_INCREMENT PRIMARY KEY,
 
 );
 
