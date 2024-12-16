@@ -65,3 +65,19 @@ CREATE TABLE patients (
     currentMedications TEXT,
     FOREIGN KEY (user_id) REFERENCES users (id)
 );
+
+
+-- Create nurse supervisors table --
+CREATE TABLE nursing_supervisors (
+    nursingSupervisors_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    nursingLicense VARCHAR(100) NOT NULL UNIQUE,
+    departmentWing VARCHAR(200),
+    workSchedule TEXT,
+    atWork BOOLEAN DEFAULT FALSE,
+    startDate DATETIME NOT NULL,
+    endDate DATETIME DEFAULT NULL,
+    reportTo INT,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    INDEX idx_nursingLicense (nursingLicense)
+);
