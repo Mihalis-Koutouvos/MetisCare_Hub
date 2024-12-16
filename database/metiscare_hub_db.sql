@@ -144,12 +144,18 @@ CREATE TABLE rooms (
 CREATE TABLE billings (
     billing_id INT AUTO_INCREMENT PRIMARY KEY,
     patient_id INT,
-    credit_card,
-
-
-
-
-    FOREIGN KEY (patient_id) REFERENCES patients (patient_id)
+    physician_id INT,
+    room_id INT,
+    notes TEXT,
+    amountTotal DECIMAL(9, 2),
+    creditCard VARCHAR(16),
+    insuranceClaim BOOLEAN,
+    status ENUM('Active', 'Closed', 'Refunded') NOT NULL,
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (patient_id) REFERENCES patients (patient_id),
+    FOREIGN KEY (physician_id) REFERENCES physicians (physician_id)
+    FOREIGN KEY (room_id) REFERENCES rooms (room_id)
 );
 
 
