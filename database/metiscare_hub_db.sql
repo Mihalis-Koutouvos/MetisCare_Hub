@@ -109,3 +109,18 @@ CREATE TABLE admins (
     FOREIGN KEY (user_id) REFERENCES users (id),
     INDEX idx_role (role)
 );
+
+
+
+-- Create rooms table --
+CREATE TABLE rooms (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    roomNumber VARCHAR(10) NOT NULL UNIQUE,
+    buildingName VARCHAR(150) NOT NULL,
+    floor INT NOT NULL,
+    department VARCHAR(200),
+    roomType ENUM('Private', 'Semi-Private', 'ICU', 'ER', 'Operating', 'Maternity', 'Recovery', 'Isolation',
+        'Pediatric', 'Observation', 'SDU', 'General Ward', 'Psychiatric', 'Rehabilitation'),
+    roomCapacity INT DEFAULT 0,
+    availability ENUM('Open', 'Almost-Full', 'Full', 'Under Repair') DEFAULT 'Open'
+);
