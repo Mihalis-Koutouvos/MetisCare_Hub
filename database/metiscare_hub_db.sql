@@ -178,12 +178,16 @@ CREATE TABLE schedules (
 CREATE TABLE private_rooms (
     id INT PRIMARY KEY,
 
+    portableOxygen BOOLEAN NOT NULL,
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 
 -- Create semi_private_rooms table --
 CREATE TABLE semi_private_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create intensive_care_unit_rooms table  --
@@ -300,45 +304,63 @@ CREATE TABLE operating_rooms (
 -- Create maternity_rooms table --
 CREATE TABLE maternity_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create recovery_rooms table --
 CREATE TABLE recovery_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create isolation_rooms table --
 CREATE TABLE isolation_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create pediatric_rooms table --
 CREATE TABLE pediatric_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create observation_rooms table --
 CREATE TABLE observation_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create step_down_unit_rooms table --
 CREATE TABLE step_down_unit_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create general_ward_rooms table --
 CREATE TABLE general_ward_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create psychiatric_rooms table --
 CREATE TABLE psychiatric_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create rehabilitation_rooms table --
 CREATE TABLE rehabilitation_rooms (
     id INT PRIMARY KEY,
+
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
