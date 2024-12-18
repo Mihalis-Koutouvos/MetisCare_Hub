@@ -162,9 +162,14 @@ CREATE TABLE billings (
 -- Create a schedules table --
 CREATE TABLE schedules (
     schedule_id INT AUTO_INCREMENT PRIMARY KEY,
-    
-
-
+    job_id INT NOT NULL, 
+    scheduleType ENUM('Physician', 'Nurse Supervisor', 'Nurse'),
+    scheduleDescription TEXT,
+    location VARCHAR(200),
+    additionalNotes VARCHAR(300),
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (job_id) REFERENCES users (id)
 );
 
 
