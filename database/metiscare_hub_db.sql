@@ -189,6 +189,40 @@ CREATE TABLE semi_private_rooms (
 -- Create intensive_care_unit_rooms table  --
 CREATE TABLE intensive_care_unit_rooms (
     id INT PRIMARY KEY,
+    besideMonitors BOOLEAN NOT NULL,
+    centralMonitoringSystems BOOLEAN NOT NULL,
+    icpMonitors BOOLEAN NOT NULL,
+     defibrillator BOOLEAN NOT NULL,
+    ultrasound BOOLEAN NOT NULL,
+    ventillator BOOLEAN NOT NULL,
+    ivFluid BOOLEAN NOT NULL,
+    painRelievers BOOLEAN NOT NULL,
+    sedatives BOOLEAN NOT NULL,
+    emegencyDrugs BOOLEAN NOT NULL,
+    testingKits BOOLEAN NOT NULL,
+    XRay BOOLEAN NOT NULL,
+    thermometers BOOLEAN NOT NULL,
+    surgicalTools BOOLEAN NOT NULL,
+    oxygenTanks BOOLEAN NOT NULL,
+    sutureKits BOOLEAN NOT NULL,
+    gloves BOOLEAN NOT NULL,
+    gown BOOLEAN NOT NULL,
+    mask BOOLEAN NOT NULL,
+    needles BOOLEAN NOT NULL, 
+    syringes BOOLEAN NOT NULL, 
+    ivCatheters BOOLEAN NOT NULL,
+    bvm BOOLEAN NOT NULL, 
+    bandages BOOLEAN NOT NULL,
+    alcoholSwabs BOOLEAN NOT NULL,
+    packedBlood BOOLEAN NOT NULL,
+    gauzePads BOOLEAN NOT NULL, 
+    scissors BOOLEAN NOT NULL, 
+    splints BOOLEAN NOT NULL, 
+    feedingPumps BOOLEAN NOT NULL,
+    overbedTables BOOLEAN NOT NULL,
+    mobilityAids BOOLEAN NOT NULL,
+    dialysisMachines BOOLEAN NOT NULL,
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create emergency_room_rooms table __
@@ -205,6 +239,7 @@ CREATE TABLE emergency_room_rooms (
     XRay BOOLEAN NOT NULL,
     thermometers BOOLEAN NOT NULL,
     surgicalTools BOOLEAN NOT NULL,
+    oxygenTanks BOOLEAN NOT NULL,
     sutureKits BOOLEAN NOT NULL,
     gloves BOOLEAN NOT NULL,
     gown BOOLEAN NOT NULL,
@@ -236,6 +271,7 @@ CREATE TABLE operating_rooms (
     XRay BOOLEAN NOT NULL,
     thermometers BOOLEAN NOT NULL,
     surgicalTools BOOLEAN NOT NULL,
+    oxygenTanks BOOLEAN NOT NULL,
     sutureKits BOOLEAN NOT NULL,
     gloves BOOLEAN NOT NULL,
     gown BOOLEAN NOT NULL,
@@ -258,6 +294,7 @@ CREATE TABLE operating_rooms (
     suctionDevices BOOLEAN NOT NULL,
     esu BOOLEAN NOT NULL,
     implants BOOLEAN NOT NULL,
+    FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
 -- Create maternity_rooms table --
