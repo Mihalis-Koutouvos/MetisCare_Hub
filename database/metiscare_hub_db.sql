@@ -211,7 +211,33 @@ CREATE TABLE private_rooms (
 -- Create semi_private_rooms table --
 CREATE TABLE semi_private_rooms (
     id INT PRIMARY KEY,
-
+    besideMonitors BOOLEAN NOT NULL,
+    centralMonitoringSystems BOOLEAN NOT NULL,
+    icpMonitors BOOLEAN NOT NULL,
+    defibrillator BOOLEAN NOT NULL,
+    feedingPumps BOOLEAN NOT NULL,
+    overbedTables BOOLEAN NOT NULL,
+    mobilityAids BOOLEAN NOT NULL,
+    ventillator BOOLEAN NOT NULL,
+    ivFluid BOOLEAN NOT NULL,
+    painRelievers BOOLEAN NOT NULL,
+    sedatives BOOLEAN NOT NULL,
+    emegencyDrugs BOOLEAN NOT NULL,
+    testingKits BOOLEAN NOT NULL,
+    thermometers BOOLEAN NOT NULL,
+    oxygenTanks BOOLEAN NOT NULL,
+    ivCatheters BOOLEAN NOT NULL,
+    bvm BOOLEAN NOT NULL, 
+    bandages BOOLEAN NOT NULL,
+    alcoholSwabs BOOLEAN NOT NULL,
+    gauzePads BOOLEAN NOT NULL, 
+    scissors BOOLEAN NOT NULL, 
+    sharpsContainer BOOLEAN NOT NULL,
+    stethoscopes BOOLEAN NOT NULL,
+    hydrations BOOLEAN NOT NULL,
+    storedSnacks BOOLEAN NOT NULL,
+    personalHygiene BOOLEAN NOT NULL,
+    portableOxygen BOOLEAN NOT NULL,
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
