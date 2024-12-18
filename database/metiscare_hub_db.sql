@@ -360,7 +360,36 @@ CREATE TABLE operating_rooms (
 -- Create maternity_rooms table --
 CREATE TABLE maternity_rooms (
     id INT PRIMARY KEY,
-
+    fetalHRMonitors BOOLEAN NOT NULL,
+    bloodPressureCuffs BOOLEAN NOT NULL,
+    laborMedications BOOLEAN NOT NULL,
+    ivFluid BOOLEAN NOT NULL,
+    painRelievers BOOLEAN NOT NULL,
+    sedatives BOOLEAN NOT NULL,
+    emegencyDrugs BOOLEAN NOT NULL,
+    postpartumMedications BOOLEAN NOT NULL,
+    umbilicalCordClamp BOOLEAN NOT NULL,
+    resuscitationEquipment BOOLEAN NOT NULL,
+    maternityPads BOOLEAN NOT NULL,
+    soothingGels BOOLEAN NOT NULL,
+    surgicalTools BOOLEAN NOT NULL,
+    oxygenTanks BOOLEAN NOT NULL,
+    sutureKits BOOLEAN NOT NULL,
+    gloves BOOLEAN NOT NULL,
+    gown BOOLEAN NOT NULL,
+    mask BOOLEAN NOT NULL,
+    needles BOOLEAN NOT NULL, 
+    syringes BOOLEAN NOT NULL, 
+    ivCatheters BOOLEAN NOT NULL,
+    bvm BOOLEAN NOT NULL, 
+    bandages BOOLEAN NOT NULL,
+    alcoholSwabs BOOLEAN NOT NULL,
+    gauzePads BOOLEAN NOT NULL, 
+    scissors BOOLEAN NOT NULL, 
+    splints BOOLEAN NOT NULL, 
+    scalpels BOOLEAN NOT NULL,
+    forceps BOOLEAN NOT NULL,
+    retractors BOOLEAN NOT NULL,
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
