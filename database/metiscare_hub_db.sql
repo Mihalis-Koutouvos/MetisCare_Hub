@@ -427,7 +427,13 @@ CREATE TABLE recovery_rooms (
 -- Create isolation_rooms table --
 CREATE TABLE isolation_rooms (
     id INT PRIMARY KEY,
-
+    ventillator BOOLEAN NOT NULL,
+    gloves BOOLEAN NOT NULL,
+    gown BOOLEAN NOT NULL,
+    mask BOOLEAN NOT NULL,
+    biohazardBags BOOLEAN NOT NULL,
+    ivCatheters BOOLEAN NOT NULL,
+    ivFluid BOOLEAN NOT NULL,
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
