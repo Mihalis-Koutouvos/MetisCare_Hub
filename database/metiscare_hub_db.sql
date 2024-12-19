@@ -544,11 +544,15 @@ CREATE TABLE general_ward_rooms (
 );
 
 -- Create psychiatric_rooms table --
+/*
 CREATE TABLE psychiatric_rooms (
     id INT PRIMARY KEY,
 
+
+
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
+*/
 
 -- Create rehabilitation_rooms table --
 CREATE TABLE rehabilitation_rooms (
