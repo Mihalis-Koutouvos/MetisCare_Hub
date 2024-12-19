@@ -462,7 +462,29 @@ CREATE TABLE observation_rooms (
 -- Create step_down_unit_rooms table --
 CREATE TABLE step_down_unit_rooms (
     id INT PRIMARY KEY,
-
+    capnography BOOLEAN NOT NULL,
+    vitalSignMonitors BOOLEAN NOT NULL,
+    ivNutrition BOOLEAN NOT NULL,
+    crutches BOOLEAN NOT NULL,
+    defibrillator BOOLEAN NOT NULL,
+    ventillator BOOLEAN NOT NULL,
+    ivFluid BOOLEAN NOT NULL,
+    painRelievers BOOLEAN NOT NULL,
+    sedatives BOOLEAN NOT NULL,
+    emegencyDrugs BOOLEAN NOT NULL,
+    testingKits BOOLEAN NOT NULL,
+    thermometers BOOLEAN NOT NULL,
+    oxygenTanks BOOLEAN NOT NULL,
+    sutureKits BOOLEAN NOT NULL,
+    gloves BOOLEAN NOT NULL,
+    gown BOOLEAN NOT NULL,
+    mask BOOLEAN NOT NULL,
+    ivCatheters BOOLEAN NOT NULL,
+    bvm BOOLEAN NOT NULL, 
+    bandages BOOLEAN NOT NULL,
+    alcoholSwabs BOOLEAN NOT NULL,
+    gauzePads BOOLEAN NOT NULL, 
+    biohazardBags BOOLEAN NOT NULL,
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
