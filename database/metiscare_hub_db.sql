@@ -546,7 +546,19 @@ CREATE TABLE general_ward_rooms (
 -- Create rehabilitation_rooms table --
 CREATE TABLE rehabilitation_rooms (
     id INT PRIMARY KEY,
-
+    therapeuticEquipment BOOLEAN NOT NULL,
+    crutches BOOLEAN NOT NULL,
+    walkers BOOLEAN NOT NULL,
+    therapyTools BOOLEAN NOT NULL,
+    portableOxygen BOOLEAN NOT NULL,
+    biohazardBags BOOLEAN NOT NULL,
+    bvm BOOLEAN NOT NULL, 
+    bandages BOOLEAN NOT NULL,
+    alcoholSwabs BOOLEAN NOT NULL,
+    gauzePads BOOLEAN NOT NULL, 
+    scissors BOOLEAN NOT NULL, 
+    defibrillator BOOLEAN NOT NULL,
+    ventillator BOOLEAN NOT NULL,
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
