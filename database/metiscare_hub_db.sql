@@ -440,7 +440,15 @@ CREATE TABLE isolation_rooms (
 -- Create pediatric_rooms table --
 CREATE TABLE pediatric_rooms (
     id INT PRIMARY KEY,
-
+    toysAndGames BOOLEAN NOT NULL,
+    smallIVs BOOLEAN NOT NULL,
+    oxygenMasks BOOLEAN NOT NULL,
+    defibrillator BOOLEAN NOT NULL,
+    gloves BOOLEAN NOT NULL,
+    gown BOOLEAN NOT NULL,
+    mask BOOLEAN NOT NULL,
+    thermometers BOOLEAN NOT NULL,
+    testingKits BOOLEAN NOT NULL,
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
