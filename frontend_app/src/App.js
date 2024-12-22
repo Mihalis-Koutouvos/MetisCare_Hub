@@ -13,8 +13,13 @@ function App() {
     <div className="App">
         <Navbar />
         <div className="content"> 
+          <Home />
+          <Rooms />
+          <About /> 
+          <Doctors />
+          <Contact />
           <Switch>
-            <Route path="/"> //Home page
+            <Route path="/"> 
               <Home />
             </Route>
           </Switch>
@@ -24,4 +29,5 @@ function App() {
   );
 }
 
+//Exported so that we can use this component (function) in other files
 export default App;
