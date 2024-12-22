@@ -7,6 +7,7 @@ import About from './About';
 import Doctors from './Doctors';
 import Contact from './Contact';
 
+//As of December 22, 2024: UI works!
 function App() {
   return (
     <Router>
