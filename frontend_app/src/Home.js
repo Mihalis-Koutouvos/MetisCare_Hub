@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import BlogList from './BlogList';
 
 const Home = () => {
     //Initial value is array of blogs in useState
@@ -10,17 +11,11 @@ const Home = () => {
     ]);
 
     return (  
-        //Iterating over each row (item: blog) in map function
-        //Need a key attribute in case changes are made to the array 
+        //Propping here:
+        //This is the parent prop; first blogs is being referenced by 
+        //() in BlogList.js
         <div className="home">
-            
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>Written by {blog.author}</p>
-                </div>
-
-            ))}
+            <BlogList blogs={blogs} title="All Blogs"/>
         </div>
     );
 }
