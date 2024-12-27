@@ -6,6 +6,7 @@ Hey! I am proud to announce one of the biggest projects I have made to date. Wit
 ## **Motivation for the Project:**
 
 ## **Disclaimers:**
+This project does not mirror any existing hospital platforms exactly, which includes their physician names, rooms, etc. 
 
 ## **How to Boot Up:**
 
