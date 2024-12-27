@@ -1,6 +1,7 @@
-const BlogList = (props) => {
-    const blogs = props.blogs;
-    const title = props.title;
+const BlogList = ({blogs, title}) => {
+    //const blogs = props.blogs;
+    //const title = props.title;
+    //What we did above is called destructuring, which is a simpler way of propping
 
     return ( 
       <div className="blog-list">
