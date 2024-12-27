@@ -6,7 +6,7 @@ Hey! I am proud to announce one of the biggest projects I have made to date. Wit
 ## **Motivation for the Project:**
 
 ## **Disclaimers:**
-This project does not mirror any existing hospital platforms exactly, which includes their physician names, rooms, etc. Rather, this MetisCare Hub is supposed to show off what hospitals COULD be using or should implement to handle room management during extreme circumstances. 
+This project does not mirror any existing hospital platforms exactly, which includes their physician names, rooms, etc. Rather, this MetisCare Hub is supposed to show off what hospitals COULD be using or should implement to handle room management during extreme circumstances. I did thorough research into what rooms I could handle in this platform. 
 
 ## **How to Boot Up:**
 
