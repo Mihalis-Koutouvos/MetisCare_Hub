@@ -1,19 +1,27 @@
+import {useState} from 'react';
+
 const Home = () => {
 
+    //let name = 'Mario';
+    //We cannot simply just change the text from a variable outside a function in a function. What
+    //we have to do is make the variable reactive by using useState, which takes in whatever we 
+    //are passing in and a function associated with your necessary operation. We are essentially
+    //re-rendering. The process we are doing with the array is called array destructuring. If 
+    //you need something to change at some point, use a State Hook.
+    const [name, setName] = useState('Mario');
+    const [age, setAge] = useState(25);
+
     const handleClick = () => {
-        console.log("Hello, Doctors!");
+        setName('Luigi');
+        setAge(30);
     }
 
-    //How to pass in parameters
-    const handleClickAgain = (name) => {
-        console.log("Hello " + name);
-    }
 
     return (  
         <div className="home">
             <h2>Home Page</h2>
+            <p>{name} is {age} years old</p>
             <button onClick={handleClick}>Click</button>
-            <button onClickAgain={() => handleClickAgain('Mario')}>Click Me Again</button>
         </div>
     );
     //Note about invoking: We don't do handleClick() because the app invokes the call for us, but 
