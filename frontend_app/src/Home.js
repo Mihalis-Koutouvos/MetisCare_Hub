@@ -10,21 +10,26 @@ const Home = () => {
         {title: 'My', body: 'he', author: 'Mario', id: 3}
     ]);
 
+    const [name, setName] = useState('Mario');
+
     const handleDelete = (id) => {
         //Returns new array based on original, so no mutation 
         const newBlogs = blogs.filter(blog => blog.id !== id);
         setBlogs(newBlogs);
     }
 
+    
     useEffect(() => {
         console.log('Use Effect Ran');
-        console.log(blogs);
-    });
+        console.log(name);
+    }, [name]);
 
-    //Functions can be passed in as props
+    
     return (  
         <div className="home">
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>
+            <button onClick={() => setName('Luigi')}>Change Name</button>
+            <p>{name}</p>
         </div>
     );
 }
