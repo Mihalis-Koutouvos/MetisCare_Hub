@@ -1,0 +1,16 @@
+{
+    "blogs": [
+        {
+            "title": "Mario Movie",
+            "body": "Why Mario Movie?",
+            "author": "Mario",
+            "id": 1
+        },
+        {
+            "title": "Yoshi Movie",
+            "body": "Why Yoshi Movie?",
+            "author": "Yoshi",
+            "id": 2 
+        }
+    ]
+}
