@@ -15,3 +15,4 @@ In addition, I made the design decisions that I did so that I could make certain
 In the files of the program, there are various requirements.txt files to look into to download necessary packages for MetisCare Hub to properly function on your local machine. 
 
 ## **Further Discussion:**
+In order to pursue this project, I split it up into various components, including the frontend, backend, database, and Python environment. 
