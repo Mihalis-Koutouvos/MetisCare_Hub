@@ -4,7 +4,7 @@
 Hey! I am proud to announce one of the biggest projects I have made to date. With that being said, allow me to introduce MetisCare Hub. This application handles a major problem with modern-day hospitals: Room management. As people rush into rooms for emegencies, day-to-day hospital goers check in with their designated physicians, and more, it becomes extremely difficult for physicians, nurses, and others alike to keep track of which rooms are open for others to utilize.
 
 ## **Motivation for the Project:**
-Continuing my passion for the healthcare/medicine industry, I went out to research issues hospitals were challenged with today. 
+Continuing my passion for the healthcare/medicine industry, I went out to research issues hospitals were challenged with today. I discovered that many hospitals, as I mentioned in the Introduction section, suffer from poor room management, where rooms are oftentimes assigned last minute as physicians, nurses, and others alike endeavor to figure out where to house patients in need of aid. 
 
 ## **Disclaimers:**
 This project does not mirror any existing hospital platforms exactly, which includes their physician names, rooms, etc. Rather, this MetisCare Hub is supposed to show off what hospitals COULD be using or should implement to handle room management during extreme circumstances. I did thorough research into what rooms I could handle in this platform. 
