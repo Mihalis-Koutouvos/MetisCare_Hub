@@ -6,21 +6,31 @@ import About from './About';
 import Doctors from './Doctors';
 import Contact from './Contact';
 
-//As of December 22, 2024: UI works!
 function App() {
   return (
     <Router>
     <div className="App">
         <Navbar />
         <div className="content"> 
-          <Home />
-          <Rooms />
-          <About /> 
-          <Doctors />
-          <Contact />
           <Switch>
             <Route path="/"> 
               <Home />
+            </Route>
+
+            <Route path="/rooms"> 
+              <Rooms />
+            </Route>
+
+            <Route path="/about"> 
+              <About />
+            </Route>
+
+            <Route path="/doctors"> 
+              <Doctors />
+            </Route>
+
+            <Route path="/contact"> 
+              <Contact />
             </Route>
           </Switch>
         </div>
