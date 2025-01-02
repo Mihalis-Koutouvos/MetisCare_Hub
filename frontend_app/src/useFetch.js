@@ -12,17 +12,16 @@ const useFetch = (url) => {
                 if (!res.ok) {
                     throw Error('Could not fetch the data for that resource.');
                 }
-
                 return res.json();
             })
             .then(data => {
-                setData(data);
                 setIsLoading(false);
+                setData(data);
                 setError(null);
             })
             .catch(err => {
-                setError(err.message);
                 setIsLoading(false);
+                setError(err.message);
             })
         }, 1000);
     }, [url]);
