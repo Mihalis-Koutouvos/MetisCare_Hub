@@ -5,11 +5,16 @@ const Rooms = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('Mario');
 
+    const handleSubmit = (e) => {
+        //Prevents page refreshing
+        e.preventDefault();
+        const blog = {title, body, author};
+    }
 
     return (  
         <div className="rooms">
             <h2>Rooms</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Blog Title:</label>
                 <input
                     type="text"
