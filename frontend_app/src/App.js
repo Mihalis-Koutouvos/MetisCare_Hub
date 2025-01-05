@@ -5,6 +5,7 @@ import Rooms from './Rooms';
 import About from './About';
 import Doctors from './Doctors';
 import Contact from './Contact';
+import BlogDetails from './BlogDetails';
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
 
             <Route path="/contact"> 
               <Contact />
+            </Route>
+
+            <Route path="/blogs/:id"> 
+              <BlogDetails />
             </Route>
           </Switch>
         </div>
