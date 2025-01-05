@@ -75,8 +75,35 @@
   margin: 20px 0;
 }
 
-/*
-.blog-details button {
+
+/*Rooms form*/
+.rooms {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rooms label {
+  text-align: left;
+  display: block;
+}
+
+.rooms h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
   background: #f1356d;
   color: #fff;
   border: 0;
@@ -84,5 +111,4 @@
   border-radius: 8px;
   cursor: pointer;
 }
-*/
 
