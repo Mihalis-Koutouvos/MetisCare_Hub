@@ -4,15 +4,15 @@ const Rooms = () => {
             <h2>Rooms</h2>
             <form>
                 <label>Blog Title:</label>
-                <input>
+                <input
                     type="text"
                     required
-                </input>
+                />
 
                 <label>Blog Body:</label>
-                <textarea>
+                <textarea
                     required
-                </textarea>
+                ></textarea>
 
                 <label>Blog Author:</label>
                 <select>
