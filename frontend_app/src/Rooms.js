@@ -4,11 +4,24 @@ const Rooms = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('Mario');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e) => {
         //Prevents page refreshing
         e.preventDefault();
         const blog = {title, body, author};
+
+        setIsLoading(true);
+
+        //Using fetch API
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log('New Room Added');
+            setIsLoading(false);
+        })
     }
 
     return (  
@@ -38,10 +51,8 @@ const Rooms = () => {
                     <option value="Mario">Mario</option>
                     <option value="Yoshi">Yoshi</option>
                 </select>
-                <button>Add Blog</button>
-                <p>{title}</p>
-                <p>{body}</p>
-                <p>{author}</p>
+                {!isPending && <button>Add Room</button>}
+                {isPending && <button disabled>Adding Room...</button>}
             </form>
         </div>
     );
