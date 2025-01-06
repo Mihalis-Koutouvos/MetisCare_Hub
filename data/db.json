@@ -1,16 +1,28 @@
 {
-    "blogs": [
-        {
-            "title": "Mario Movie",
-            "body": "Why Mario Movie?",
-            "author": "Mario",
-            "id": 1
-        },
-        {
-            "title": "Yoshi Movie",
-            "body": "Why Yoshi Movie?",
-            "author": "Yoshi",
-            "id": 2 
-        }
-    ]
+  "blogs": [
+    {
+      "title": "Mario Movie",
+      "body": "Why Mario Movie?",
+      "author": "Mario",
+      "id": "1"
+    },
+    {
+      "title": "Yoshi Movie",
+      "body": "Why Yoshi Movie?",
+      "author": "Yoshi",
+      "id": "2"
+    },
+    {
+      "id": "5ea3",
+      "title": "ss",
+      "body": "ww",
+      "author": "Mario"
+    },
+    {
+      "id": "feea",
+      "title": "erw",
+      "body": "2r2r",
+      "author": "Mario"
+    }
+  ]
 }

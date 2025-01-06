@@ -1,10 +1,12 @@
 import {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 
 const Rooms = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('Mario');
     const [isLoading, setIsLoading] = useState(false);
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         //Prevents page refreshing
@@ -21,6 +23,10 @@ const Rooms = () => {
         }).then(() => {
             console.log('New Room Added');
             setIsLoading(false);
+            //history.go(-1);
+
+            //redirecting to the home page
+            history.push('/');
         })
     }
 
@@ -51,8 +57,8 @@ const Rooms = () => {
                     <option value="Mario">Mario</option>
                     <option value="Yoshi">Yoshi</option>
                 </select>
-                {!isPending && <button>Add Room</button>}
-                {isPending && <button disabled>Adding Room...</button>}
+                {!isLoading && <button>Add Room</button>}
+                {isLoading && <button disabled>Adding Room...</button>}
             </form>
         </div>
     );
