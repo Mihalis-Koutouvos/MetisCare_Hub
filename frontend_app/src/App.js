@@ -6,6 +6,7 @@ import About from './About';
 import Doctors from './Doctors';
 import Contact from './Contact';
 import BlogDetails from './BlogDetails';
+import NotFoundErrorPage from './NotFoundErrorPage';
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
 
             <Route path="/blogs/:id"> 
               <BlogDetails />
+            </Route>
+
+            <Route path="*">
+              <NotFoundErrorPage/>
             </Route>
           </Switch>
         </div>
