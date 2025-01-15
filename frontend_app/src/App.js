@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Rooms from './Rooms';
 import About from './About';
-import Doctors from './Doctors';
+import Doctors from './Staff';
 import Contact from './Contact';
 import BlogDetails from './BlogDetails';
 import NotFoundErrorPage from './NotFoundErrorPage';
@@ -27,7 +27,7 @@ function App() {
               <About />
             </Route>
 
-            <Route path="/doctors"> 
+            <Route path="/staff"> 
               <Doctors />
             </Route>
 
