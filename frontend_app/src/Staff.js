@@ -1,7 +1,7 @@
 const Staff = () => {
     return (  
         <div className="staff">
-            <h2>Doctors</h2>
+            <h2>Staff</h2>
         </div>
     );
 }
