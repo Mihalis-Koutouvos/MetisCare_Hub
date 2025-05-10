@@ -5,7 +5,8 @@ services:
     hostname: frontend-app-metiscare
     volumes: ['./frontend_app/src:/appcode']
     ports:
-      - 8501:8501
+      - 3000:3000
+    command: npm start
 
   backend_app:
     build: ./backend
