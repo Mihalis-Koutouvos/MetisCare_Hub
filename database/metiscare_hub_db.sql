@@ -33,7 +33,7 @@ CREATE TABLE users (
 -- Create physicians table --
 CREATE TABLE physicians (
     physician_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
+    user_id INT NOT NULL,
     specialization VARCHAR(200),
     experienceInYears INT NOT NULL,
     medicalSchool VARCHAR(200) NOT NULL,
@@ -562,13 +562,17 @@ CREATE TABLE rehabilitation_rooms (
     FOREIGN KEY (id) REFERENCES rooms (id)
 );
 
--- Create psychiatric_rooms table --
-/*
-CREATE TABLE psychiatric_rooms (
-    id INT PRIMARY KEY,
+
+
+-- Create example data for the website -- 
+INSERT INTO users (firstName, lastName, email, passwordHash, country, state, username)
+    VALUES ("Daniel", "Buchanan", "buchdaniel@gmail.com", "98987dHW7", "US", "ME", "danbuch"),
+    ("Mira", "Balay", "balaymira@yahoo.com", "Mii98uj2n", "US", "MD", "balaym"),
+    ("Idali", "Kituipto", "uhieuhdea8", "US", "FL", "ikitu");
 
 
 
-    FOREIGN KEY (id) REFERENCES rooms (id)
-);
-*/
+INSERT INTO physicians (user_id, specialization, experienceInYears, medicalSchool, onCall)
+    VALUES (1, "Neurology", 30, "Harvard Medical School", TRUE),
+    (2, "Gatroenterology", 25, "Boston University School of Medicine", FALSE),
+    (3, "Dermatology", 14, "Washington University School of Medicine", TRUE);
