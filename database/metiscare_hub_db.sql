@@ -568,7 +568,10 @@ CREATE TABLE rehabilitation_rooms (
 INSERT INTO users (firstName, lastName, email, passwordHash, country, state, username)
     VALUES ("Daniel", "Buchanan", "buchdaniel@gmail.com", "98987dHW7", "US", "ME", "danbuch"),
     ("Mira", "Balay", "balaymira@yahoo.com", "Mii98uj2n", "US", "MD", "balaym"),
-    ("Idali", "Kituipto", "uhieuhdea8", "US", "FL", "ikitu");
+    ("Idali", "Kituipto", "uhieuhdea8", "US", "FL", "ikitu"),
+    ("Jacob", "Stern", "uqeieuhdea8", "US", "MA", "iki2");
+    ("Sarah", "Trump", "uhieqdea8", "US", "IN", "iki");
+    ("Stephen", "Curry", "uhieuh2q8", "US", "HI", "ikitw");
 
 
 
@@ -576,3 +579,37 @@ INSERT INTO physicians (user_id, specialization, experienceInYears, medicalSchoo
     VALUES (1, "Neurology", 30, "Harvard Medical School", TRUE),
     (2, "Gatroenterology", 25, "Boston University School of Medicine", FALSE),
     (3, "Dermatology", 14, "Washington University School of Medicine", TRUE);
+
+
+INSERT INTO patients (patient_id, user_id, primaryPhysician_id, DOB, bloodType)
+    VALUES (1, 4, 1, 2000-08-12, "A+"),
+    (2, 5, 2, 2005-12-13, "AB+"),
+    (3, 6, 3, 1985-02-10, "O+");
+
+
+CREATE TABLE patients (
+    patient_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    primaryPhysician_id INT,
+    DOB DATE,
+    medicalHistory TEXT,
+    bloodType ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'),
+    currentMedications TEXT,
+    FOREIGN KEY (user_id) REFERENCES users (id)
+);
+
+
+-- Create nurse supervisors table --
+CREATE TABLE nursing_supervisors (
+    nursingSupervisors_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    nursingLicense VARCHAR(100) NOT NULL UNIQUE,
+    departmentWing VARCHAR(200),
+    workSchedule TEXT,
+    atWork BOOLEAN DEFAULT FALSE,
+    startDate DATETIME NOT NULL,
+    endDate DATETIME DEFAULT NULL,
+    reportTo INT,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    INDEX idx_nursingLicense (nursingLicense)
+);
