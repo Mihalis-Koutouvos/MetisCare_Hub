@@ -569,9 +569,13 @@ INSERT INTO users (firstName, lastName, email, passwordHash, country, state, use
     VALUES ("Daniel", "Buchanan", "buchdaniel@gmail.com", "98987dHW7", "US", "ME", "danbuch"),
     ("Mira", "Balay", "balaymira@yahoo.com", "Mii98uj2n", "US", "MD", "balaym"),
     ("Idali", "Kituipto", "uhieuhdea8", "US", "FL", "ikitu"),
-    ("Jacob", "Stern", "uqeieuhdea8", "US", "MA", "iki2");
-    ("Sarah", "Trump", "uhieqdea8", "US", "IN", "iki");
-    ("Stephen", "Curry", "uhieuh2q8", "US", "HI", "ikitw");
+    ("Jacob", "Stern", "uqeieuhdea8", "US", "MA", "iki2"),
+    ("Sarah", "Trump", "uhieqdea8", "US", "IN", "iki"),
+    ("Stephen", "Curry", "uhieuh2q8", "US", "HI", "ikitw"),
+    ("Adele", "Laud", "uhieu", "US", "WI", "ieitw"),
+    ("Rachel", "Buchanan", "uheu", "US", "NJ", "rachel"),
+    ("Elliot", "Johnson", "ieu", "US", "MA", "ellionte"),
+    ("Celeste", "Corman", "ueu", "US", "MA", "cormc");
 
 
 
@@ -587,29 +591,11 @@ INSERT INTO patients (patient_id, user_id, primaryPhysician_id, DOB, bloodType)
     (3, 6, 3, 1985-02-10, "O+");
 
 
-CREATE TABLE patients (
-    patient_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    primaryPhysician_id INT,
-    DOB DATE,
-    medicalHistory TEXT,
-    bloodType ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'),
-    currentMedications TEXT,
-    FOREIGN KEY (user_id) REFERENCES users (id)
-);
+INSERT INTO nursing_supervisors (user_id, nursingLicense, departmentWing)
+    VALUES (7, "Validated", "Surgery"); 
 
 
--- Create nurse supervisors table --
-CREATE TABLE nursing_supervisors (
-    nursingSupervisors_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    nursingLicense VARCHAR(100) NOT NULL UNIQUE,
-    departmentWing VARCHAR(200),
-    workSchedule TEXT,
-    atWork BOOLEAN DEFAULT FALSE,
-    startDate DATETIME NOT NULL,
-    endDate DATETIME DEFAULT NULL,
-    reportTo INT,
-    FOREIGN KEY (user_id) REFERENCES users (id),
-    INDEX idx_nursingLicense (nursingLicense)
-);
+INSERT INTO nurses (user_id, nursingLicense, departmentWing, reportTo)
+    VALUES (8, "Validated", "Cardiology", 7),
+    (9, "Validated", "Surgery", 7),
+    (10, "Validated", "Surgery", 7);
